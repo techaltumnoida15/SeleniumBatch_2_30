@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19077" started-at="2020-01-05T16:07:47 IST" finished-at="2020-01-05T16:08:06 IST">
+  <suite name="Default suite" duration-ms="24949" started-at="2020-01-11T16:01:40 IST" finished-at="2020-01-11T16:02:05 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19077" started-at="2020-01-05T16:07:47 IST" finished-at="2020-01-05T16:08:06 IST">
-      <class name="newTests.TC04">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:newTests.TC04@6eceb130]" name="openBrowser" is-config="true" duration-ms="10873" started-at="2020-01-05T16:07:47 IST" finished-at="2020-01-05T16:07:58 IST">
+    <test name="Default test" duration-ms="24949" started-at="2020-01-11T16:01:40 IST" finished-at="2020-01-11T16:02:05 IST">
+      <class name="newTests.TC03">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:newTests.TC03@6eceb130]" name="openBrowser" is-config="true" duration-ms="10245" started-at="2020-01-11T16:01:40 IST" finished-at="2020-01-11T16:01:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="testCase04()[pri:0, instance:newTests.TC04@6eceb130]" name="testCase04" duration-ms="8165" started-at="2020-01-05T16:07:58 IST" finished-at="2020-01-05T16:08:06 IST">
+        <test-method status="PASS" signature="testCase03()[pri:0, instance:newTests.TC03@6eceb130]" name="testCase03" duration-ms="14670" started-at="2020-01-11T16:01:50 IST" finished-at="2020-01-11T16:02:05 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase04 -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:newTests.TC04@6eceb130]" name="quitBrowser" is-config="true" duration-ms="3" started-at="2020-01-05T16:08:06 IST" finished-at="2020-01-05T16:08:06 IST">
+        </test-method> <!-- testCase03 -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:newTests.TC03@6eceb130]" name="quitBrowser" is-config="true" duration-ms="0" started-at="2020-01-11T16:02:05 IST" finished-at="2020-01-11T16:02:05 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
-      </class> <!-- newTests.TC04 -->
+      </class> <!-- newTests.TC03 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

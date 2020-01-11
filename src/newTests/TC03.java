@@ -1,9 +1,14 @@
 package newTests;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import basePack.BaseClass;
@@ -17,7 +22,21 @@ public class TC03 extends BaseClass{
 		//Enter Origin
 		WebElement origin = driver.findElement(By.xpath("(//input[@class='form-control pr-4'])[1]"));
 		origin.sendKeys("LAS");
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
+		
+		/*
+		 * WebDriverWait wait = new WebDriverWait(driver, 10);
+		 * wait.pollingEvery(Duration.ofMillis(500));
+		 * 
+		 * wait.until(ExpectedConditions.attributeContains(By.cssSelector(
+		 * "div[class^='suggestion-box__content']"), "class", "visible"));
+		 */
+		
+		FluentWait<WebDriver> fWait = new FluentWait<WebDriver>(driver);
+		fWait.withTimeout(Duration.ofSeconds(10));
+		fWait.pollingEvery(Duration.ofMillis(500));
+		
+		//fWait.until(ExpectedConditions.)
 		
 		//How many suggestion..?
 		List<WebElement> allSuggestion = driver.findElement(By.xpath("//ul[@class='suggestion-box__list']")).findElements(By.tagName("li"));
@@ -41,6 +60,8 @@ public class TC03 extends BaseClass{
 				break;
 			}
 		}
+		
+		//wait.until(ExpectedConditions.elementtobecl)
 	}
 }
 
