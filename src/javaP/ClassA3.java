@@ -22,7 +22,7 @@ public class ClassA3 {
 	
 	//1. Calc sum of all int
 	
-	//2. 
+	//2. Sort this array
 	
 	
 	
