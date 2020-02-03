@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="21549" started-at="2020-01-12T16:05:49 IST" finished-at="2020-01-12T16:06:10 IST">
+  <suite name="Batch 2:30" duration-ms="26544" started-at="2020-02-02T16:40:13 IST" finished-at="2020-02-02T16:40:39 IST">
     <groups>
     </groups>
-    <test name="Naukri Test" duration-ms="21549" started-at="2020-01-12T16:05:49 IST" finished-at="2020-01-12T16:06:10 IST">
-      <class name="newTests.TC01">
-        <test-method status="PASS" signature="openBrowser(java.lang.String)[pri:0, instance:newTests.TC01@5c072e3f]" name="openBrowser" is-config="true" duration-ms="10089" started-at="2020-01-12T16:05:49 IST" finished-at="2020-01-12T16:05:59 IST">
+    <test name="Google Test" duration-ms="26544" started-at="2020-02-02T16:40:13 IST" finished-at="2020-02-02T16:40:39 IST">
+      <class name="feb_02.TC01">
+        <test-method status="PASS" signature="openBrowser(java.lang.String)[pri:0, instance:feb_02.TC01@5c072e3f]" name="openBrowser" is-config="true" duration-ms="11739" started-at="2020-02-02T16:40:13 IST" finished-at="2020-02-02T16:40:24 IST">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="FAIL" signature="testCase01()[pri:0, instance:newTests.TC01@5c072e3f]" name="testCase01" duration-ms="10742" started-at="2020-01-12T16:05:59 IST" finished-at="2020-01-12T16:06:10 IST">
+        <test-method status="FAIL" signature="testCase01()[pri:0, instance:feb_02.TC01@5c072e3f]" name="testCase01" duration-ms="13477" started-at="2020-02-02T16:40:24 IST" finished-at="2020-02-02T16:40:38 IST">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[did not expect to find [true] but found [false]]]>
@@ -29,7 +29,7 @@ at org.testng.Assert.fail(Assert.java:97)
 at org.testng.Assert.failNotEquals(Assert.java:969)
 at org.testng.Assert.assertTrue(Assert.java:43)
 at org.testng.Assert.assertTrue(Assert.java:53)
-at newTests.TC01.testCase01(TC01.java:31)
+at feb_02.TC01.testCase01(TC01.java:20)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -59,11 +59,18 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCase01 -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:newTests.TC01@5c072e3f]" name="quitBrowser" is-config="true" duration-ms="688" started-at="2020-01-12T16:06:10 IST" finished-at="2020-01-12T16:06:10 IST">
+        <test-method status="PASS" signature="quitBrowser(org.testng.ITestResult)[pri:0, instance:feb_02.TC01@5c072e3f]" name="quitBrowser" is-config="true" duration-ms="1301" started-at="2020-02-02T16:40:38 IST" finished-at="2020-02-02T16:40:39 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCase01 status=FAILURE method=TC01.testCase01()[pri:0, instance:feb_02.TC01@5c072e3f] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
-      </class> <!-- newTests.TC01 -->
-    </test> <!-- Naukri Test -->
-  </suite> <!-- Suite1 -->
+      </class> <!-- feb_02.TC01 -->
+    </test> <!-- Google Test -->
+  </suite> <!-- Batch 2:30 -->
 </testng-results>

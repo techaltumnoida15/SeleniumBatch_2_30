@@ -1,11 +1,18 @@
 package basePack;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -62,7 +69,41 @@ public class BaseClass {
 	
 	
 	@AfterMethod
-	public void quitBrowser() {
+	public void quitBrowser(ITestResult result) throws Exception{
+		/*
+		String s1 = result.getMethod().getMethodName();
+		System.out.println("Test Method Name is = " + s1);
+		
+		long timeToExecute = result.getEndMillis();
+		System.out.println("Total time to execute test " + s1 + " is = " + timeToExecute);
+		
+		String s2 = result.getTestClass().getName();
+		System.out.println("S2 is = " + s2);
+		
+		*/
+		if(!result.isSuccess()) {
+			//Take screenshot
+			
+			  File srcScreenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			  
+			  String screenshotName = result.getTestClass().getName() + "_" + result.getMethod().getMethodName();
+			  
+			  String pattern = "dd-MM-yyyy_hh-mm-ss";
+			  SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+			  String dateTime = simpleDateFormat.format(new Date());
+			  
+			
+			  String destinationPath = System.getProperty("user.dir") + "\\screenshot\\" + screenshotName + "_" + dateTime + ".jpeg";
+			  
+			  File destScrrenshot = new File(destinationPath);
+			  
+			  //FileUtils.copyFile(srcScreenshot, destScrrenshot);
+			  FileUtils.moveFile(srcScreenshot, destScrrenshot);
+			 
+			//testCase01_2020-02-02_03-53-39.jpeg
+			  //feb_02.TC01_testCase01_02-02-2020_03-55-39.jpeg
+		}
+				
 		driver.quit();
 		
 	}
